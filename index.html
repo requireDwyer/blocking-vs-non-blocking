@@ -27,25 +27,24 @@
         <div>
             <h2>Non-blocking Code</h2>
             <p>
-                The fibonacci function is not done in the main thread. It is ran
-                in a <b>different</b> thread. If you have watch javascript
-                videos, you might think that you would use
-                <code>async await</code>. But you would be wrong.
-                <code>async await</code> only works for native javascript
-                function that are taken from the javascript engine and sent to
-                the browser to run. Ex:
-                <code>setTimeout, setInterval, fetch, Promise...</code> You
-                might think that because you are using
-                <code>async await</code> that your function returns a Promise,
-                and this means that you code is done asynchronously. But because
-                it's a function that you made it will still be ran by the
-                javascript engine. Blocking you site from working. If you want a
-                normal function to returns asynchronously you will have to use
-                web workers.
+                This Fibonacci function runs in a <b>separate thread</b>, not
+                the main one. If you've watched videos about JavaScript, you
+                might think that using <code>async/await</code> would make it
+                run smoothly. But that's not quite right.
+                <code>async/await</code>
+                only works for built-in JavaScript functions that are sent from
+                the JavaScript engine to the browser to be executed, such as
+                <code>setTimeout, setInterval, fetch,</code> and
+                <code>Promise</code>. So even if you use
+                <code>async/await</code> with your own function, it will still
+                be run by the JavaScript engine, which could cause your website
+                to stop working. To make your function run asynchronously
+                without causing any problems, you should use
                 <a
                     href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers"
-                    >Web Workers</a
+                    >web workers</a
                 >
+                instead. <a href="https://youtu.be/7Rrv9qFMWNM">(check out)</a>
             </p>
             <hr />
             <p id="fibText-nonBlocking">[ Fib calculation will go here ]</p>
@@ -54,8 +53,8 @@
         <div>
             <h2>Blocking Code</h2>
             <p>
-                The fibonacci function is in the
-                <b>main</b> thread.
+                This fibonacci function runs the
+                <b>main thread</b>.
             </p>
             <hr />
             <p id="fibText-blocking">[ Fib calculation will go here ]</p>

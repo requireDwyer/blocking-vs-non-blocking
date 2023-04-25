@@ -1,4 +1,4 @@
-const number = 45;
+const number = 44;
 // ^ === globe number ===
 
 const fibText = document.querySelector('#fibText-nonBlocking');
