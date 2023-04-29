@@ -1,4 +1,5 @@
 # Blocking vs Non-Blocking
+[Live link](https://requiredwyer.github.io/blocking-vs-non-blocking/)
 
 This repository contains code to demonstrate the difference between blocking and non-blocking code in JavaScript, as well as an example of how to use web workers to run a function asynchronously.
 
