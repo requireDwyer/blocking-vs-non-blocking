@@ -19,6 +19,7 @@ fibWorker.onmessage = (message) => {
 fibBtn.addEventListener('click', () => {
     fibText.classList.add('loading');
     fibText.classList.remove('success');
-    fibText.innerText = 'Loading... (Try changing the color 👍)';
+    fibText.innerText =
+        'Loading... (Try changing the color and getting some jokes 👍)';
     fibWorker.postMessage(number);
 });

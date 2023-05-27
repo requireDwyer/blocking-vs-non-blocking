@@ -9,7 +9,8 @@ fibBtn2.innerText = `Generate Fib of ${number}`;
 fibBtn2.addEventListener('click', () => {
     fibText2.classList.add('loading');
     fibText2.classList.remove('success');
-    fibText2.innerText = 'Loading... (Blocking: Try changing the color 👎)';
+    fibText2.innerText =
+        'Loading... (Blocking: Try changing the color and getting some jokes👎)';
     setTimeout(() => {
         fibText2.innerText = fib(number);
         console.log(
