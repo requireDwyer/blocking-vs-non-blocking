@@ -1,5 +1,4 @@
-const number = 44;
-// ^ === globe number ===
+import { number } from './blocking.js';
 
 const fibText = document.querySelector('#fibText-nonBlocking');
 const fibBtn = document.querySelector('#fibBtn-nonBlocking');
@@ -7,7 +6,7 @@ const fibBtn = document.querySelector('#fibBtn-nonBlocking');
 fibText.innerText = `[ Fib of ${number} will go here ]`;
 fibBtn.innerText = `Generate Fib of ${number}`;
 
-const fibWorker = new Worker('fibWorker.js');
+const fibWorker = new Worker('src/fibWorker.js');
 
 fibWorker.onmessage = (message) => {
     fibText.innerText = message.data;

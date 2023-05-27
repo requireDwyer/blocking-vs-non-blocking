@@ -1,4 +1,4 @@
-// number is defined in other file
+export const number = 44;
 
 const fibText2 = document.querySelector('#fibText-blocking');
 const fibBtn2 = document.querySelector('#fibBtn-blocking');
